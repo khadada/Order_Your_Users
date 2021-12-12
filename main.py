@@ -22,7 +22,24 @@ root.config(padx=100,pady=100)
 root.title('Success organistion of the time for users')
 img = PhotoImage(file='tomato.png')
 canvas = Canvas(root, width=200,height=230,highlightthickness=0)
-canvas.grid(column=0,row=0)
+canvas.grid(column=1,row=1)
 canvas.create_image(100,115, image=img)
 canvas.create_text(100,135,fill='#fff',text='00:00',font=(FONT_NAME,30,'bold'))
+
+timer_label = Label(text='Timer',font=(FONT_NAME,30,'normal'),fg=GREEN)
+timer_label.grid(row=0,column=1)
+
+
+timer_label = Label(text='✓',font=(FONT_NAME,30,'normal'),fg=GREEN)
+timer_label.grid(row=3,column=1)
+
+
+
+
+start_btn = Button(text='Start',pady=5,padx=9)
+start_btn.grid(row=2,column=0)
+reset_btn = Button(text='Rest',pady=5,padx=9)
+reset_btn.grid(row=2,column=2)
+
+
 root.mainloop()
